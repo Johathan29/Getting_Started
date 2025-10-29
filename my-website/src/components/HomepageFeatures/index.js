@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import { Card } from '../ui/card';
 
 const FeatureList = [
   {
@@ -54,6 +55,7 @@ export default function HomepageFeatures() {
     <section className={styles.features}>
       <div className="container">
         <div className="row">
+          
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}

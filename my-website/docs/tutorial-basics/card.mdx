@@ -1,0 +1,34 @@
+---
+title: My Document
+position: 7
+---
+import Card from '../../src/components/ui/card.jsx';
+import Alert from '../../src/components/ui/alert.jsx';
+import Accordion from '../../src/components/ui/accordion.jsx';
+import clsx from "clsx";
+import style from '../../src/components/ui/card.module.css'
+
+
+# Welcome to my document
+
+## This is some content.
+<div className={clsx(style.Card)} style={{}} >
+    <Card title="My First Card" description="This is a description for my first card." />
+    <Card title="Another Card" description="Here's more information." />
+</div>
+
+
+
+## anclar{#ancla}
+
+<Accordion summary="Some details containing headings" content="I'm a heading that will not show up in the TOC"/>
+
+<details>
+<summary>Some details containing headings</summary>
+<h2 id="">I'm a heading that will not show up in the TOC</h2>
+
+Some content...
+
+</details>
+
+<Alert title="Danger" description="In development, you can only use one locale at a time." type="danger"/>
