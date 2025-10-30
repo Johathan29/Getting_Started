@@ -52,6 +52,7 @@ const config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
+        
         blog: {
           showReadingTime: true,
           feedOptions: {
@@ -69,11 +70,12 @@ const config = {
         },
         theme: {
           customCss: './src/css/custom.css',
+          
         },
       }),
     ],
   ],
-
+  
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -88,6 +90,7 @@ const config = {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
         },
+        
         items: [
           {
             type: 'docSidebar',
@@ -95,7 +98,10 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
+          
+        
           { to: '/blog', label: 'Blog', position: 'left' },
+          
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
@@ -113,8 +119,12 @@ const config = {
                 label: 'Tutorial',
                 to: '/docs/intro',
               },
+              
             ],
+     
+            
           },
+          
           {
             title: 'Community',
             items: [
@@ -139,6 +149,7 @@ const config = {
                 label: 'Blog',
                 to: '/blog',
               },
+              
               {
                 label: 'GitHub',
                 href: 'https://github.com/facebook/docusaurus',

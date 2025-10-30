@@ -1,7 +1,6 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
-import { Card } from '../ui/card';
+    // src/components/CardList.jsx
+    import React from 'react';
+import Card from './card';
 
 const FeatureList = [
   {
@@ -36,31 +35,14 @@ const FeatureList = [
   },
 ];
 
-function Feature({Svg, title, description}) {
-  return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--xl">
-        <Heading as="h3">{title}</Heading>
-        <p className={clsx('text--bold')}>{description}</p>
-      </div>
-    </div>
-  );
-}
+    function CardList() {
+      return (
+        <>
+        {FeatureList.map((props, idx) => (
+          <Card key={idx} {...props} />
+        ))}
+        </>
+      );
+    }
 
-export default function HomepageFeatures() {
-  return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+    export default CardList; // Export the component

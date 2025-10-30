@@ -32,3 +32,6 @@ h1{
   --ifm-color-primary-lightest: #cce9f7;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+.cardTitle{
+  font-size: 1.2rem!important;
+}

@@ -7,13 +7,33 @@
     grid-row-gap: 0px;
 }
 @media screen and (max-width: 996px) {
-    .Card {
+    .card {
       display: block;
     }
+    .cardDescription{
+      max-width: auto;
+        }
+        
   }
-  .Card div a {
+  .card div a {
     text-decoration: none;
     
     color: rgb(18, 17, 17);
+  }
+  .cardDescription{
+  max-width: 10rem;
+  color: black!important;
+  }
+  .card{
+    border: '1px solid #ccc'; 
+    padding: 16px;
+     border-Radius: '8px';
+     margin-Bottom:'4px';
+     width:'max-content' ;
+     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+  .cardLink{
+    text-decoration: none;
+    
   }
   

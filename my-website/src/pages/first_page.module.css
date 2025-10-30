@@ -23,6 +23,15 @@
 }
 .textBold
 {
-  font-size: 5.3rem;
+  font-size: 3.3rem;
   font-weight: 500;
+}
+.cardContainer{
+  width: 100%;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:1rem;
+  padding-Block: 2rem;
+  padding-inline:2rem;
 }

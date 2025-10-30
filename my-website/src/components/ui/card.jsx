@@ -1,14 +1,16 @@
     // src/components/Card.jsx
     import React from 'react';
-import CardList from '../cardList';
-
-    function Card({ title, description }) {
+import CardList from './cardList';
+import Link from '@docusaurus/Link';
+import clsx from 'clsx';
+import style from './card.module.css'
+    function Card({ title, description,slug }) {
       return (
         
-        <div className="" style={{ border: '1px solid #ccc', padding: '16px', borderRadius: '8px',marginBottom:'4px',width:'auto' }}>
-          <a href='#ancla'>
+        <div className={clsx('col col--3 card', style.card)} >
+          <a href={slug} className={clsx('cardLink', style.cardLink)}>
             <h3>{title}</h3>
-            <p>{description}</p>
+            <p className={clsx('cardDescription', style.cardDescription)} >{description}</p>
           </a>
         </div>
         

@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import style from '../ui/card.module.css'
-export default function Card({title, description,classname}) { (
+export default function Cards({title, description,classname}) { (
     <section className={clsx("a",classname)}>
 
    
