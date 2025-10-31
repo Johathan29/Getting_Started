@@ -4,7 +4,8 @@ import markdown from './markdown-page.md'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import Heading from '@theme/Heading';
 import styles from './first_page.module.css';
 import Card from '../components/ui/card';
@@ -47,19 +48,25 @@ export default function first_page() {
       ];
     const {siteConfig} = useDocusaurusContext();
     return (
-      <Layout
-        title={`Hello from ${siteConfig.title}`}
-        description="Description will go into a meta tag in <head />">
+  
       
-        <main className={clsx('container')}>
-         
+        <main className={clsx('container main',styles.main)}>
+          <h1>Categorias</h1>
             <div className={clsx('cardContainer ', styles.cardContainer)}>
                 {FeatureList.map((props, idx) => (
                     <Card key={idx} {...props} />
             ))}
             
         </div>
+        <Tabs groupId="current-os" queryString className={clsx('tabs',styles.tabs)}>
+          <TabItem value="android" label="Android">
+            Android
+          </TabItem>
+          <TabItem value="ios" label="iOS">
+            iOS
+          </TabItem>
+        </Tabs>
     </main>
-      </Layout>
+    
     );
   }
