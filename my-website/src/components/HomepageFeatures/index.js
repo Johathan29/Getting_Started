@@ -42,8 +42,8 @@ function Feature({Svg, title, description}) {
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
-      <div className="text--center padding-horiz--xl">
-        <Heading as="h3">{title}</Heading>
+      <div className="text-center padding-horiz--xl">
+        <Heading as="h3" className={clsx('text-gray-500')}>{title}</Heading>
         <p className={clsx('text--bold')}>{description}</p>
       </div>
     </div>
@@ -53,7 +53,7 @@ function Feature({Svg, title, description}) {
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
-      <div className="container">
+      <div className="container mx-auto">
         <div className="row">
           
           {FeatureList.map((props, idx) => (

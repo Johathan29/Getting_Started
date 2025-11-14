@@ -1,173 +1,161 @@
 // @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
 import { themes as prismThemes } from 'prism-react-renderer';
-
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+import { generateNavbarItems } from './generateNavbar.js';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'title ',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  title: 'MINISTERIO DE HACIENDA Y ECONOMÍA',
+  tagline: 'Documentación del Proyecto',
+   headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'keywords',
+        content: 'docusaurus, documentación, desarrollo',
+      },
+      
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "icon",
+        href: "/img/favicon.ico",
+      },
+    },
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
-  future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
-  },
-
-  // Set the production url of your site here
+  ],
+       scripts: [
+    {
+      src: "https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4",
+      async: true,
+    },
+  ], 
+  future: { v4: true },
   url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'facebook',
+  projectName: 'docusaurus',
 
   onBrokenLinks: 'throw',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
+  i18n: { defaultLocale: 'en', locales: ['en'] },
 
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        docs: false,
+        blog: { showReadingTime: true },
+        theme: { customCss: './src/css/custom.css', },
         
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
-        theme: {
-          customCss: './src/css/custom.css',
-          
-        },
+        
       }),
     ],
   ],
-  
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
-      colorMode: {
-        respectPrefersColorScheme: true,
+
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'frontend',
+        path: 'docs/frontend',
+        routeBasePath: 'frontend',
+        sidebarPath: require.resolve('./sidebars.js'),
       },
-      navbar: {
-        title: 'My Site',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'backend',
+        path: 'docs/backend',
+        routeBasePath: 'backend',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+  ],
+
+  themeConfig: {
+    image: 'img/docusaurus-social-card.jpg',
+    colorMode: { respectPrefersColorScheme: true },
+   navbar: {
+  title: 'MINISTERIO DE HACIENDA Y ECONOMÍA',
+  logo: { alt: 'Logo', src: 'img/logo-cupula.svg' },
+  items: [
+    {
+      to: '/frontend/intro',
+      label: 'Frontend',
+      position: 'left',
+      activeBaseRegex: '^/frontend/', // 👈 se mantiene activo en cualquier ruta dentro de /frontend
+    },
+    {
+      to: '/backend/intro',
+      label: 'Backend',
+      position: 'left',
+      activeBaseRegex: '^/backend/', // 👈 igual para backend
+    },
+    { to: '/blog', label: 'Blog', position: 'left' },
+    {
+      href: 'https://github.com/facebook/docusaurus',
+      label: 'GitHub',
+      position: 'right',
+    },
+  ],
+},
+
+    footer: {
+      style: 'dark',
+      links: [
+       
+        {
+         
+      items: [
+        {
+          html: `
+            <a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item" style="display:flex; align-items:center; gap:5px;height: 4rem;">
+              <img src="/img/logo-footer.png" style="" />
+              
+            </a>
+          `,
         },
+      ],
+    },
         
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Documentation',
-          },
-          
-          {
-            to:'/first_page',
-            position: 'left',
-            label: 'page',
-          },
-          { to: '/blog', label: 'Blog', position: 'left' },
-          
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-              
-            ],
-     
-            
-          },
-          
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },
-      prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-    }),
+         {
+  title: 'Learn',
+  items: [
+    {
+      to: '/frontend/intro',
+      label: 'Frontend',
+      activeBaseRegex: '^/frontend/',
+    },
+    {
+      to: '/backend/intro',
+      label: 'Backend',
+      activeBaseRegex: '^/backend/',
+    },
+  ],
+},
+
+        
+        {
+          title: 'Community',
+          items: [{ label: 'Help', to: '/' }],
+        },
+         {
+          title: 'Community',
+          items: [{ label: 'Help', to: '/' }],
+        },
+         {
+          title: 'Community',
+          items: [{ label: 'Help', to: '/' }],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Full Stack Docs.`,
+    },
+    prism: {
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
+    },
+  },
 };
 
 export default config;
