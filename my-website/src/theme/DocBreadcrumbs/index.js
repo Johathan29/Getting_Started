@@ -1,44 +1,75 @@
-import React from "react";
-import OriginalDocBreadcrumbs from "@theme-original/DocBreadcrumbs";
-import clsx from "clsx";
-
-/**
- * Sobrescribe el breadcrumb original para aplicar estilos
- * sin perder la funcionalidad nativa de Docusaurus.
- */
-export default function DocBreadcrumbs(props) {
+import React from 'react';
+import clsx from 'clsx';
+import {ThemeClassNames} from '@docusaurus/theme-common';
+import {useSidebarBreadcrumbs} from '@docusaurus/plugin-content-docs/client';
+import {useHomePageRoute} from '@docusaurus/theme-common/internal';
+import Link from '@docusaurus/Link';
+import {translate} from '@docusaurus/Translate';
+import HomeBreadcrumbItem from '@theme/DocBreadcrumbs/Items/Home';
+import DocBreadcrumbsStructuredData from '@theme/DocBreadcrumbs/StructuredData';
+import styles from './styles.module.css';
+// TODO move to design system folder
+function BreadcrumbsItemLink({children, href, isLast}) {
+  const className = 'breadcrumbs__link hover:bg-transparent hover:!text-[#2383f6] !text-[#4f9fff]';
+  if (isLast) {
+    return <span className={className}>{children}</span>;
+  }
+  return href ? (
+    <Link className={className} href={href}>
+      <span>{children}</span>
+    </Link>
+  ) : (
+    <span className={className}>{children}</span>
+  );
+}
+// TODO move to design system folder
+function BreadcrumbsItem({children, active}) {
   return (
-    <div
-      className={clsx(
-        // 🔹 Contenedor general del breadcrumb
-        "flex items-center gap-2 text-sm mb-6 px-2 py-1 mx-4",
-        "backdrop-blur-sm border-b border-[#3641534f] ",
-        "text-gray-700 dark:text-gray-300"
-      )}
-    >
-      <OriginalDocBreadcrumbs
-        {...props}
+    <li
+      className={clsx('breadcrumbs__item', {
+        'breadcrumbs__item--active': active,
+      })}>
+      {children}
+    </li>
+  );
+}
+export default function DocBreadcrumbs() {
+  const breadcrumbs = useSidebarBreadcrumbs();
+  const homePageRoute = useHomePageRoute();
+  if (!breadcrumbs) {
+    return null;
+  }
+  return (
+    <>
+      <DocBreadcrumbsStructuredData breadcrumbs={breadcrumbs} />
+      <nav
         className={clsx(
-          // 🔹 Contenedor interno (lista de links)
-          "flex items-center flex-wrap gap-1",
-          "text-gray-600 dark:text-gray-300 p-3"
+          ThemeClassNames.docs.docBreadcrumbs,
+          styles.breadcrumbsContainer,
         )}
-        itemClassName={clsx(
-          // 🔹 Cada item (link o texto final)
-          "px-2 py-1 rounded-md transition-all duration-200",
-          "hover:text-blue-600 hover:bg-blue-100/50",
-          "dark:hover:text-blue-400 dark:hover:bg-blue-900/30 "
-        )}
-        activeItemClassName={clsx(
-          // 🔹 El item actual (último breadcrumb)
-          "font-semibold text-blue-600 dark:text-blue-400 p-2",
-          "dark:bg-blue-900/40"
-        )}
-        separatorClassName={clsx(
-          // 🔹 Separador entre elementos
-          "mx-1 text-gray-400 dark:text-gray-500 select-none"
-        )}
-      />
-    </div>
+        aria-label={translate({
+          id: 'theme.docs.breadcrumbs.navAriaLabel',
+          message: 'Breadcrumbs',
+          description: 'The ARIA label for the breadcrumbs',
+        })}>
+        <ul className="breadcrumbs">
+          {homePageRoute && <HomeBreadcrumbItem />}
+          {breadcrumbs.map((item, idx) => {
+            const isLast = idx === breadcrumbs.length - 1;
+            const href =
+              item.type === 'category' && item.linkUnlisted
+                ? undefined
+                : item.href;
+            return (
+              <BreadcrumbsItem key={idx} active={isLast}>
+                <BreadcrumbsItemLink href={href} isLast={isLast}>
+                  {item.label}
+                </BreadcrumbsItemLink>
+              </BreadcrumbsItem>
+            );
+          })}
+        </ul>
+      </nav>
+    </>
   );
 }

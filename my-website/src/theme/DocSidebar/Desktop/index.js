@@ -14,7 +14,7 @@ function DocSidebarDesktop({path, sidebar, onCollapse, isHidden}) {
   } = useThemeConfig();
   return (
     <div
-      className={clsx("!p-0 mr-8 border-r-1 border-[var(--ifm-color-primary-darker)] "+
+      className={clsx("pt-10",  
         styles.sidebar,
         hideOnScroll && styles.sidebarWithHideableNavbar,
         isHidden && styles.sidebarHidden,

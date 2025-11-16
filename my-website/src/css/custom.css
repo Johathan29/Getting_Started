@@ -43,7 +43,7 @@ li.breadcrumbs__item{
   --ifm-color-primary-darkest: #002652;
   --ifm-color-primary-light: #003c81;
   --ifm-color-primary-lighter: #003f87;
-  --ifm-color-primary-lightest: #004798;
+  --ifm-color-primary-lightest: #f3f4f6;
   
   
   .container.padding-top--md.padding-bottom--lg{
@@ -52,25 +52,21 @@ li.breadcrumbs__item{
   nav{
     color: rgb(12, 12, 12);
   }
-      .breadcrumbs__item:not(:last-child):after {
-        height: 0.9rem;
-        background-repeat: no-repeat;
-        color: rgb(29, 26, 26);
-        content: '›';
-        background: none;
-        font-size: 2rem;
-        position: relative;
-        bottom: 1.4rem;
-    }
+      
    a.menu__link--active,.breadcrumbs__item--active .breadcrumbs__link{
     color: #4f9fff;
     background: none;
   }
   aside{
-  margin-right: 4rem;
-  background-color: white;
  
-    border-right: 1px solid #c1c4ca;
+  background-color: white;
+ border-right: 1px solid var(--ifm-color-primary-lightest);
+}
+a.table-of-contents__link--active {
+    color:#fff ;
+    border-radius: 12px;
+    background-color: #5694f8;
+    width: max-content;
 
 }
 
@@ -83,9 +79,7 @@ li.breadcrumbs__item{
 h1{
   color: var(--ifm-color-primary-light);
 }
-a.table-of-contents__link--active {
-    color: #5694f8;
-}
+
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
@@ -95,28 +89,22 @@ a.table-of-contents__link--active {
   --ifm-color-primary-darkest: #1f88ff;
   --ifm-color-primary-light: #c2dfff;
   --ifm-color-primary-lighter: #d6e9ff;
-  --ifm-color-primary-lightest: #ffffff;
+  --ifm-color-primary-lightest: #101828;
   --ifm-background-color: #030712;
+  
+  /*article a.card:hover {
+    box-shadow: 10px 10px 5px 0px rgba(242, 241, 241, 0.75);
+    -webkit-box-shadow: 1px 0px 7px 3px rgba(242, 241, 241, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(242,241,241,0.75);
+}*/
 
   .col.docItemCol_VOVn {
     border-right: 1px solid var(--ifm-color-primary-darker);
     margin-right: 2rem;
    
 }
-aside {
-    border-right: 1px solid #ffffff;
-}
-  .breadcrumbs__item:not(:last-child):after {
-        height: 0.9rem;
-        background-repeat: no-repeat;
-        color: #ffffff8c;
-        content: '›';
-        filter: none;
-        background: none;
-        font-size: 2rem;
-        position: relative;
-        bottom: 1.4rem;
-    }
+
+  
     .flex.items-center.gap-2.text-sm.mb-6.px-2.py-1.mx-4.backdrop-blur-sm.border-b.border-\[\#3641534f\].text-gray-700.dark\:text-gray-300 {
     border-color: #ffffff8c;
 }
@@ -130,10 +118,14 @@ background-color:var(--ifm-background-color);
   nav{
     color: white!important;
   }
-  a.table-of-contents__link--active {
-    color: #5694f8;
-    ;
+a.table-of-contents__link--active {
+    color:#fff ;
+    border-radius: 12px;
+    background-color: #5694f8;
+    width: max-content;
+
 }
+
  .bg-black{
   background: black!important;
 }
@@ -326,7 +318,7 @@ article {
   line-height: 1.7;
   font-size: 1.05rem;
   color: var(--ifm-font-color-base);
-  max-width: 90%;
+  
   margin: auto;
 }
 .tocCollapsible_ETCw.theme-doc-toc-mobile.tocMobile_ITEo {
@@ -387,10 +379,6 @@ article ol {
   margin: 1rem 0 1rem 1.4rem;
 }
 
-article li {
-  margin: 0.4rem 0;
-  line-height: 1.6;
-}
 
 article ul li {
   list-style-type: disc;
@@ -410,8 +398,8 @@ article a {
   font-weight: 500;
 }
 
-article a:hover {
-  text-decoration: underline;
+.sidebar_mhZE{
+  padding-top: 2rem!important;
 }
 
 /* ------------------------------------------------------------------ */
@@ -433,7 +421,7 @@ article blockquote {
 /* ------------------------------------------------------------------ */
 
 article code {
-  background: var(--ifm-code-background);
+  
   padding: 2px 5px;
   border-radius: 4px;
   font-size: 0.95rem;

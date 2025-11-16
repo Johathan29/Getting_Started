@@ -51,7 +51,7 @@ export default function Footer() {
       </div>
 
       {/* Línea final */}
-      <div className={clsx("mt-10 pt-6 border-t border-white/10 text-center text-xs !text-white ")}>
+      <div className={clsx("mt-10 pt-6 border-t border-[var(--ifm-color-primary-lightest)] text-center text-xs !text-white ")}>
         © {new Date().getFullYear()} Ministerio de Hacienda y Economía. Todos los derechos reservados.
       </div>
     </footer>
