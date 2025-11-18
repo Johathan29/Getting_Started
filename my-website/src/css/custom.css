@@ -8,8 +8,7 @@
 /* You can override the default Infima variables here. "*/
 
 /*@import "./tailwind.modules.css";*/
-
-
+    
 .breadcrumbs{
 display: flex;
 align-items: center;
@@ -44,6 +43,9 @@ li.breadcrumbs__item{
   --ifm-color-primary-light: #003c81;
   --ifm-color-primary-lighter: #003f87;
   --ifm-color-primary-lightest: #f3f4f6;
+  .bgmenu{
+background-color: #003169;
+  }
   
   
   .container.padding-top--md.padding-bottom--lg{
@@ -91,7 +93,9 @@ h1{
   --ifm-color-primary-lighter: #d6e9ff;
   --ifm-color-primary-lightest: #101828;
   --ifm-background-color: #030712;
-  
+   .bgmenu{
+background-color: #030712;
+  }
   /*article a.card:hover {
     box-shadow: 10px 10px 5px 0px rgba(242, 241, 241, 0.75);
     -webkit-box-shadow: 1px 0px 7px 3px rgba(242, 241, 241, 0.75);

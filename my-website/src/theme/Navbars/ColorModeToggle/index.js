@@ -36,8 +36,9 @@ export default function NavbarColorModeToggle({ className }) {
             : "rotate-0 opacity-100"
         )}
       >
-       🌙
+        ☀️
       </span>
+
       <span
         className={clsx(
           "text-xl transition-all duration-500 transform",
@@ -46,7 +47,7 @@ export default function NavbarColorModeToggle({ className }) {
             : "-rotate-180 opacity-0 absolute"
         )}
       >
-         ☀️
+        🌙
       </span>
     </button>
   );

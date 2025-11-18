@@ -5,10 +5,10 @@ export default {
       "type": "category",
       "label": "Desing",
       "items": [
-        "C:/Users/rosar/Documents/Project/docusorus/my-website/docs/frontend/desing/figma",
-        "C:/Users/rosar/Documents/Project/docusorus/my-website/docs/frontend/desing/intro"
+        "frontend/desing/figma",
+        "frontend/desing/intro"
       ]
     },
-    "C:/Users/rosar/Documents/Project/docusorus/my-website/docs/frontend/intro"
+    "frontend/intro"
   ]
 };

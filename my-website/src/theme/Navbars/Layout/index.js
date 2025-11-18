@@ -32,8 +32,8 @@ export default function NavbarLayout({children}) {
         description: 'The ARIA label for the main navigation',
       })}
       className={clsx(
-        ThemeClassNames.layout.navbar.container,
-        'navbar !bg-[var(--ifm-color-primary-darker)] text-white',
+        ThemeClassNames.layout.navbar.container,styles.backgroundNavbar,
+        'navbar ',
         'navbar--fixed-top',
         hideOnScroll && [
           styles.navbarHideable,

@@ -7,7 +7,7 @@ export default function Footer() {
   const { siteConfig } = useDocusaurusContext();
 
   return (
-    <footer className={clsx("bg-[#002652] text-white py-10 px-6  border-t border-[var(--ifm-color-primary-darker)] ")}>
+    <footer className={clsx("!bg-[var(--ifm-color-primary-darker)] text-white py-10 px-6  border-t border-[var(--ifm-color-primary-darker)] ")}>
       <div className={clsx("max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8")}>
 
         {/* Logo + Texto */}

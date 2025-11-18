@@ -34,7 +34,7 @@ export default function NavbarItem({ label, to, href, position, ...props }) {
     : { to: linkHref };
 
   return (
-    <li className={clsx("hidden md:flex items-center mx-2", position === "right" && "ml-auto")}>
+    <li className={clsx(" items-center mx-2", position === "right" && "ml-auto")}>
       <Link
         {...linkProps}
         {...props}
