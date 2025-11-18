@@ -93,11 +93,11 @@ const config = {
       activeBaseRegex: '^/backend/', // 👈 igual para backend
     },
     { to: '/blog', label: 'Blog', position: 'left' },
-    {
+   /* {
       href: 'https://github.com/facebook/docusaurus',
       label: 'GitHub',
       position: 'right',
-    },
+    },*/
   ],
 },
 
