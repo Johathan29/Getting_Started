@@ -46,14 +46,14 @@ function NavbarContentLayout({left, right}) {
       <div
         className={clsx(
           ThemeClassNames.layout.navbar.containerLeft,
-          'navbar__items',
+          'navbar__items gap-4',
         )}>
         {left}
       </div>
       <div
         className={clsx(
           ThemeClassNames.layout.navbar.containerRight,
-          'navbar__items navbar__items--right',
+          'navbar__items navbar__items--right ',
         )}>
         {right}
       </div>

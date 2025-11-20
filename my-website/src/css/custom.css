@@ -8,7 +8,12 @@
 /* You can override the default Infima variables here. "*/
 
 /*@import "./tailwind.modules.css";*/
-    
+div[inert] {
+  transform: translatex(11rem);
+}
+.navbar__link--active {
+  color: #7bc5ff !important;
+}
 .breadcrumbs{
 display: flex;
 align-items: center;
@@ -43,6 +48,7 @@ li.breadcrumbs__item{
   --ifm-color-primary-light: #003c81;
   --ifm-color-primary-lighter: #003f87;
   --ifm-color-primary-lightest: #f3f4f6;
+  --ifm-background-color:#f3f4f6;
   .bgmenu{
 background-color: #003169;
   }
@@ -168,10 +174,7 @@ background-color: #002652;
 
 
 /* Si usas items activos (el seleccionado) */
-.navbar__link--active {
-  color: #77b6ff !important;
- 
-}
+
 
 /* Icono de menú en mobile */
 .navbar__toggle {
@@ -220,10 +223,7 @@ background-color: #002652;
   width: 100%;
 }
 
-/* Color cuando está activo */
-.navbar__link--active {
-  color: #77b6ff !important;
-}
+
 
 /* ------------------------------------- */
 /* 3) Transición suave de color en hover */

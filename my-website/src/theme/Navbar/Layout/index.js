@@ -33,7 +33,7 @@ export default function NavbarLayout({children}) {
       })}
       className={clsx(
         ThemeClassNames.layout.navbar.container,
-        'navbar !bg-[var(--ifm-color-primary-darker)] text-white',
+        'navbar !bg-[var(--ifm-color-primary-darker)] text-white px-4',
         'navbar--fixed-top',
         hideOnScroll && [
           styles.navbarHideable,

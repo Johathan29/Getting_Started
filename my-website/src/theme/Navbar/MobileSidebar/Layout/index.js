@@ -17,7 +17,7 @@ function NavbarMobileSidebarPanel({children, inert}) {
     <div
       className={clsx(
         ThemeClassNames.layout.navbar.mobileSidebar.panel,
-        'navbar-sidebar__item menu',
+        'navbar-sidebar__item menu ',
       )}
       {...inertProps(inert)}>
       {children}
@@ -34,12 +34,12 @@ export default function NavbarMobileSidebarLayout({
     <div
       className={clsx(
         ThemeClassNames.layout.navbar.mobileSidebar.container,
-        'navbar-sidebar',
+        'navbar-sidebar w-full bg-[var(--ifm-background-color)]',
       )}>
       {header}
       <div
-        className={clsx('navbar-sidebar__items', {
-          'navbar-sidebar__items--show-secondary': secondaryMenuShown,
+        className={clsx('navbar-sidebar__items px-4 py-4', {
+          'navbar-sidebar__items--show-secondary bg-[var(--ifm-background-color)]': secondaryMenuShown,
         })}>
         <NavbarMobileSidebarPanel inert={secondaryMenuShown}>
           {primaryMenu}
