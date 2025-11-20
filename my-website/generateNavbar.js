@@ -17,6 +17,7 @@ export function generateNavbarItems() {
   const sections = [
     { id: "frontend", label: "Frontend" },
     { id: "backend", label: "Backend" },
+    { id: "systems", label: "Systems" },
   ];
 
   return sections.map(({ id, label }) => {

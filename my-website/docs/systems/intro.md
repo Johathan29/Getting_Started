@@ -1,5 +1,5 @@
 ---
-sidebar_position: introduction
+sidebar_position: 1
 ---
 
 # Tutorial Systems
