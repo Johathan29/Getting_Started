@@ -1,0 +1,27 @@
+---
+title: My Document
+position: 7
+---
+import Card from '../../src/components/ui/cardList.jsx';
+import Alert from '../../src/components/ui/alert.jsx';
+import Accordion from '../../src/components/ui/accordion.jsx';
+import clsx from "clsx";
+import style from '../../src/components/ui/card.module.css'
+
+
+# Welcome to my document
+
+## This is some content.
+
+
+
+
+## anclar{#ancla}
+
+<Accordion summary="Some details containing headings" content="I'm a heading that will not show up in the TOC"/>
+
+
+:::danger
+In development, you can only use one locale at a time.
+:::
+<Alert title="Danger" description="In development, you can only use one locale at a time." type="danger"/>

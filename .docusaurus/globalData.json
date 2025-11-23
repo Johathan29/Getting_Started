@@ -1,0 +1,171 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "frontend": {
+      "path": "/frontend",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/frontend",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "componentes",
+              "path": "/frontend/componentes",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "desing/figma",
+              "path": "/frontend/desing/figma",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "desing/intro",
+              "path": "/frontend/desing/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/frontend/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/desing",
+              "path": "/frontend/category/desing",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/frontend/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    },
+    "backend": {
+      "path": "/backend",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/backend",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "API/auth",
+              "path": "/backend/API/auth",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "API/endpoints",
+              "path": "/backend/API/endpoints",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "base-datos/modelos",
+              "path": "/backend/base-datos/modelos",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "base-datos/queries",
+              "path": "/backend/base-datos/queries",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "componentes",
+              "path": "/backend/componentes",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/backend/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/api",
+              "path": "/backend/category/api",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/base-de-datos",
+              "path": "/backend/category/base-de-datos",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/backend/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    },
+    "systems": {
+      "path": "/systems",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/systems",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "intro",
+              "path": "/systems/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "test/test",
+              "path": "/systems/test/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-extras/manage-docs-versions",
+              "path": "/systems/tutorial-extras/manage-docs-versions",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorial-extras/translate-your-site",
+              "path": "/systems/tutorial-extras/translate-your-site",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/tutorial---extras",
+              "path": "/systems/category/tutorial---extras",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/test",
+              "path": "/systems/category/test",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/systems/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

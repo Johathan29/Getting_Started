@@ -1,0 +1,13 @@
+.docItemContainer header + *,
+.docItemContainer article > *:first-child {
+  margin-top: 0!important;
+}
+.padding-top--md {
+  padding-top: 0rem!important;
+}
+
+@media (min-width: 997px) {
+  .docItemCol {
+    max-width: 75% !important;
+  }
+}

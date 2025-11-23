@@ -1,0 +1,12 @@
+{
+  "type": "mdx",
+  "permalink": "/frontend",
+  "source": "@site/src/pages/frontend/frontend.mdx",
+  "title": "Front-End",
+  "description": "HELLP",
+  "frontMatter": {
+    "title": "Front-End",
+    "slug": "frontend"
+  },
+  "unlisted": false
+}

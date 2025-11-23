@@ -71,6 +71,15 @@ const config = {
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'systems',
+        path: 'docs/systems',
+        routeBasePath: 'systems',
+        sidebarPath: require.resolve('./i.js'),
+      },
+    ],
   ],
 
   themeConfig: {
@@ -91,6 +100,12 @@ const config = {
       label: 'Backend',
       position: 'left',
       activeBaseRegex: '^/backend/', // 👈 igual para backend
+    },
+    {
+      to: '/systems/intro',
+      label: 'Systems',
+      position: 'left',
+      activeBaseRegex: '^/systems/', // 👈 se mantiene activo en cualquier ruta dentro de /frontend
     },
     { to: '/blog', label: 'Blog', position: 'left' },
    /* {

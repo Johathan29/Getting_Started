@@ -1,0 +1,23 @@
+{
+  "id": "base-datos/queries",
+  "title": "queries",
+  "description": "",
+  "source": "@site/docs/backend/base-datos/queries.md",
+  "sourceDirName": "base-datos",
+  "slug": "/base-datos/queries",
+  "permalink": "/backend/base-datos/queries",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "modelos",
+    "permalink": "/backend/base-datos/modelos"
+  },
+  "next": {
+    "title": "Componentes UI",
+    "permalink": "/backend/componentes"
+  }
+}

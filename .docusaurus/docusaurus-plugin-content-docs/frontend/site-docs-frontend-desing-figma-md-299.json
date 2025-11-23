@@ -1,0 +1,25 @@
+{
+  "id": "desing/figma",
+  "title": "Figma",
+  "description": "Conecta a todos los participantes del proceso de desarrollo de producto para materializar más rápido tu idea. Envía tus productos con confianza, gracias al respaldo de controles flexibles y potentes funciones de seguridad.",
+  "source": "@site/docs/frontend/desing/figma.md",
+  "sourceDirName": "desing",
+  "slug": "/desing/figma",
+  "permalink": "/frontend/desing/figma",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Figma"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Tutorial Intro",
+    "permalink": "/frontend/desing/intro"
+  },
+  "next": {
+    "title": "Componentes UI",
+    "permalink": "/frontend/componentes"
+  }
+}

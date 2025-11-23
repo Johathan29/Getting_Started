@@ -1,0 +1,13 @@
+{
+  "type": "mdx",
+  "permalink": "/first_page",
+  "source": "@site/src/pages/firts_page.mdx",
+  "title": "Firts Page",
+  "description": "intro",
+  "frontMatter": {
+    "title": "Firts Page",
+    "slug": "first_page",
+    "sidebar_position": 12
+  },
+  "unlisted": false
+}
