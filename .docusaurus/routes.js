@@ -113,11 +113,6 @@ export default [
     exact: true
   },
   {
-    path: '/first_page2',
-    component: ComponentCreator('/first_page2', '67d'),
-    exact: true
-  },
-  {
     path: '/frontend',
     component: ComponentCreator('/frontend', '5d9'),
     exact: true
