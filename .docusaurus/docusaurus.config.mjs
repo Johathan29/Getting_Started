@@ -151,7 +151,7 @@ export default {
         {
           "items": [
             {
-              "html": "\n            <a href=\"https://github.com/facebook/docusaurus\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"footer__link-item\" style=\"display:flex; align-items:center; gap:5px;height: 4rem;\">\n              <img src=\"/img/logo-footer.png\" style=\"\" />\n              \n            </a>\n          "
+              "html": "\n            <a href=\"https://github.com/facebook/docusaurus\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"footer__link-item w-auto\" >\n              <img src=\"/img/logo-footer.png\" style=\"\" class='w-[15rem] lg:w-[10rem]'/>\n              \n            </a>\n          "
             }
           ],
           "title": null

@@ -124,9 +124,10 @@ const config = {
          
       items: [
         {
+          
           html: `
-            <a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item" style="display:flex; align-items:center; gap:5px;height: 4rem;">
-              <img src="/img/logo-footer.png" style="" />
+            <a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item w-auto" >
+              <img src="/img/logo-footer.png" style="" class='w-[15rem] lg:w-[10rem]'/>
               
             </a>
           `,
