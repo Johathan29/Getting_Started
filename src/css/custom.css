@@ -512,8 +512,8 @@ article table tr:nth-child(even) {
 
 /* INFO */
 .admonition-info {
-  background: #e0f2fe;
-  border-left-color: #0284c7;
+  background: #0f629a;
+  border-left-color: #0e5172;
 }
 
 /* TIP */
@@ -560,7 +560,10 @@ ul.theme-doc-sidebar-menu.menu__list
  {
     padding-inline: 2rem;
 }
-
+.markdown div > div {
+  margin-block: 2rem;
+  padding-inline: 1rem;
+}
 
 
  

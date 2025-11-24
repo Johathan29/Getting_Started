@@ -43,7 +43,12 @@ const config = {
     [
       'classic',
       ({
-        docs: false,
+        docs: {
+          admonitions: {
+            keywords: ['note', 'tip', 'info', 'warning', 'danger'],
+            extendDefaults: true,
+          },
+        },
         blog: { showReadingTime: true },
         theme: { customCss: './src/css/custom.css', },
         

@@ -26,7 +26,11 @@ The classic template will automatically be added to your project after you run t
 ```bash
 npm init docusaurus@latest my-website classic
 ```
+:::info
 
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
 You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
 
 ```bash

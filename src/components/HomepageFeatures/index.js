@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 import { Card } from '../ui/card';
-
+import Alert from '../ui/alert'
 const FeatureList = [
   {
     title: 'Easy to Use',
@@ -55,7 +55,7 @@ export default function HomepageFeatures() {
     <section className={styles.features}>
       <div className="container mx-auto">
         <div className="row">
-          
+          <Alert  title="prueba" description="viendo si la description funciona" type="warning" ></Alert>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}

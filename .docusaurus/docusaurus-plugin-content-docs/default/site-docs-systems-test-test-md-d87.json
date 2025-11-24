@@ -1,0 +1,22 @@
+{
+  "id": "systems/test/test",
+  "title": "Test!",
+  "description": "You have just learned the basics of Docusaurus and made some changes to the initial template.",
+  "source": "@site/docs/systems/test/test.md",
+  "sourceDirName": "systems/test",
+  "slug": "/systems/test/",
+  "permalink": "/docs/systems/test/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "Test",
+    "permalink": "/docs/category/test-1"
+  }
+}

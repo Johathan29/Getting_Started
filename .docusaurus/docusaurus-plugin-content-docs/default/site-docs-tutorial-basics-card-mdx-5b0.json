@@ -1,0 +1,26 @@
+{
+  "id": "tutorial-basics/card",
+  "title": "My Document",
+  "description": "This is some content.",
+  "source": "@site/docs/tutorial-basics/card.mdx",
+  "sourceDirName": "tutorial-basics",
+  "slug": "/tutorial-basics/card",
+  "permalink": "/docs/tutorial-basics/card",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "My Document",
+    "position": 7
+  },
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "Congratulations!",
+    "permalink": "/docs/tutorial-basics/congratulations"
+  },
+  "next": {
+    "title": "Tutorial - Extras",
+    "permalink": "/docs/category/tutorial---extras"
+  }
+}
