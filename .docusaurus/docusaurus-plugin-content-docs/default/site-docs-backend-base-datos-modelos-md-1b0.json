@@ -1,0 +1,23 @@
+{
+  "id": "backend/base-datos/modelos",
+  "title": "modelos",
+  "description": "",
+  "source": "@site/docs/backend/base-datos/modelos.md",
+  "sourceDirName": "backend/base-datos",
+  "slug": "/backend/base-datos/modelos",
+  "permalink": "/docs/backend/base-datos/modelos",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "Base de datos",
+    "permalink": "/docs/category/base-de-datos"
+  },
+  "next": {
+    "title": "queries",
+    "permalink": "/docs/backend/base-datos/queries"
+  }
+}
