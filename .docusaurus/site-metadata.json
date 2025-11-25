@@ -7,11 +7,6 @@
       "name": "@docusaurus/plugin-css-cascade-layers",
       "version": "3.9.2"
     },
-    "docusaurus-plugin-content-docs": {
-      "type": "package",
-      "name": "@docusaurus/plugin-content-docs",
-      "version": "3.9.2"
-    },
     "docusaurus-plugin-content-blog": {
       "type": "package",
       "name": "@docusaurus/plugin-content-blog",
@@ -35,6 +30,11 @@
     "docusaurus-theme-classic": {
       "type": "package",
       "name": "@docusaurus/theme-classic",
+      "version": "3.9.2"
+    },
+    "docusaurus-plugin-content-docs": {
+      "type": "package",
+      "name": "@docusaurus/plugin-content-docs",
       "version": "3.9.2"
     }
   }

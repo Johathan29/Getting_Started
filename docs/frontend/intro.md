@@ -33,7 +33,7 @@ You can type this command into Command Prompt, Powershell, Terminal, or any othe
 The command also installs all necessary dependencies you need to run Docusaurus.
 ```
 
-:::info
+:::danger
 
 Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
 

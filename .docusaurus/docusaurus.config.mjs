@@ -66,18 +66,7 @@ export default {
     [
       "classic",
       {
-        "docs": {
-          "admonitions": {
-            "keywords": [
-              "note",
-              "tip",
-              "info",
-              "warning",
-              "danger"
-            ],
-            "extendDefaults": true
-          }
-        },
+        "docs": false,
         "blog": {
           "showReadingTime": true
         },
