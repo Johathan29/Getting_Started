@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import Translate from '@docusaurus/Translate';
 import AdmonitionLayout from '@theme/Admonition/Layout';
 import IconNote from '@theme/Admonition/Icon/Note';
-const infimaClassName = 'alert alert--secondary';
+const infimaClassName = 'alert alert--secondary  text-[var(--ifm-text-secundary)] border-[var(--ifm-color-primary-dark)]';
 const defaultProps = {
   icon: <IconNote />,
   title: (

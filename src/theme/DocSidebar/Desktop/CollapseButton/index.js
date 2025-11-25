@@ -3,7 +3,8 @@ import clsx from 'clsx';
 import {translate} from '@docusaurus/Translate';
 import IconArrow from '@theme/Icon/Arrow';
 import styles from './styles.module.css';
-export default function CollapseButton({onClick}) {
+export default function CollapseButton({click}) {
+  console.log(click)
   return (
     <button
       type="button"
@@ -21,7 +22,7 @@ export default function CollapseButton({onClick}) {
         'button button--secondary button--outline',
         styles.collapseSidebarButton,
       )}
-      onClick={onClick}>
+      onClick={()=>click}>
       <IconArrow className={styles.collapseSidebarButtonIcon} />
     </button>
   );

@@ -48,10 +48,12 @@ main{
   --ifm-color-primary-dark: #003169;
   --ifm-color-primary-darker: #002f63;
   --ifm-color-primary-darkest: #002652;
-  --ifm-color-primary-light: #003c81;
+  --ifm-color-primary-light: #0b0f12;
   --ifm-color-primary-lighter: #003f87;
   --ifm-color-primary-lightest: #91939645;
   --ifm-background-color:#ffffff;
+  --ifm-text-secundary:#0b0b0b;
+
   .bgmenu{
 background-color: #003169;
   }
@@ -90,8 +92,19 @@ a.table-of-contents__link--active {
 h1{
   color: var(--ifm-color-primary-light);
 }
-
-
+summary{
+  justify-content: space-between;
+  display: flex;
+  width: 24rem;
+}
+.details_lb9f > summary::after {
+position: absolute;
+  top: 0.45rem;
+  left: 0;
+  content: '▶';}
+  .details_lb9f[open]:not(.isBrowser_bmU9) > summary::before, .details_lb9f[data-collapsed='false'].isBrowser_bmU9 > summary::after {
+    transform: rotate(90deg);
+}
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
   --ifm-color-primary: #99c9ff;
@@ -102,6 +115,7 @@ h1{
   --ifm-color-primary-lighter: #d6e9ff;
   --ifm-color-primary-lightest: #101828;
   --ifm-background-color: #030712;
+  --ifm-text-secundary:#ffffff;
    .bgmenu{
 background-color: #030712;
   }

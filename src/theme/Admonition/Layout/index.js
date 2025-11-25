@@ -5,13 +5,13 @@ import styles from './styles.module.css';
 function AdmonitionContainer({type, className, children}) {
   return (
     <div
-      className={clsx("mt-4 p-4 mr-4",
+      className={clsx("mt-4 p-4 mr-4 rounded border-l-3",
         ThemeClassNames.common.admonition,
         ThemeClassNames.common.admonitionType(type),
         styles.admonition,
         className,
       )}>
-      {children}
+      {children} 
     </div>
   );
 }
@@ -25,7 +25,7 @@ function AdmonitionHeading({icon, title}) {
 }
 function AdmonitionContent({children}) {
   return children ? (
-    <div className={clsx(styles.admonitionContent)}>{children}</div>
+    <div className={clsx("text-black",styles.admonitionContent)}>{children}</div>
   ) : null;
 }
 export default function AdmonitionLayout(props) {
