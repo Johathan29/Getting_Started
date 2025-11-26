@@ -6,6 +6,7 @@
 [data-theme='dark']:root {
   --docusaurus-collapse-button-bg: rgb(255 255 255 / 5%);
   --docusaurus-collapse-button-bg-hover: rgb(255 255 255 / 10%);
+  --pattern-fg:#ffffff65;
 }
 
 @media (min-width: 997px) {
@@ -37,4 +38,22 @@
 .collapseSidebarButton {
   display: none;
   margin: 0;
+}
+.collapseSidebarButton::after{
+  position: absolute;
+  width: 0%;
+  background: var(--ifm-color-primary-dark)/20;
+ background-image:  repeating-linear-gradient(315deg, var(--pattern-fg) 0, var(--pattern-fg) 2px, transparent 0, transparent 50%);
+background-size: 12px 12px;
+  aspect-ratio: 1;
+clip-path: polygon(0 0,100% 100%,0 100%,0 0,5% 10%,5% 95%,90% 95%,5% 10%);
+  content: "";
+  z-index: 1;
+  height: -webkit-fill-available;
+  right: 0px;
+  transition: 0.7s ease-in-out;
+}
+.collapseSidebarButton:hover::after{
+  width: 100%;
+  transition: 0.7s ease;
 }

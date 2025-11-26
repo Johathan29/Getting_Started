@@ -47,3 +47,20 @@ The `cd` command changes the directory you're working with. In order to work wit
 The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
 
 Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+
+<details>
+  <summary>Toggle me!</summary>
+
+  This is the detailed content
+
+  ```js
+  console.log("Markdown features including the code block are available");
+  ```
+
+  You can use Markdown here including **bold** and _italic_ text, and [inline link](https://docusaurus.io)
+  <details>
+    <summary>Nested toggle! Some surprise inside...</summary>
+
+    😲😲😲😲😲
+  </details>
+</details>

@@ -1,6 +1,6 @@
 {
   "id": "componentes",
-  "title": "Componentes UI",
+  "title": "Componentes de Interfaz",
   "description": "Puedes mezclar Markdown y JSX para crear documentación interactiva.",
   "source": "@site/docs/frontend/componentes.mdx",
   "sourceDirName": ".",
@@ -11,7 +11,7 @@
   "tags": [],
   "version": "current",
   "frontMatter": {
-    "title": "Componentes UI"
+    "position": 4
   },
   "sidebar": "tutorialSidebar",
   "previous": {

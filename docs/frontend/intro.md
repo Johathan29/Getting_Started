@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+
 ---
 
 # Tutorial Intro
@@ -57,12 +58,24 @@ import Tabs from '@theme/Tabs';
 
 import TabItem from '@theme/TabItem';
 
-:::tip[Use tabs in admonitions]
+:::note[Use tabs in admonitions]
 
-<Tabs className="flex gap-2 ">
+<Tabs className="flex gap-2  ">
   <TabItem value="apple" label="Apple" >This is an apple 🍎</TabItem>
   <TabItem value="orange" label="Orange">This is an orange 🍊</TabItem>
   <TabItem value="banana" label="Banana">This is a banana 🍌</TabItem>
 </Tabs>
 
 :::
+
+<details>
+  <summary>Caracteristicas </summary>
+
+  This is the detailed content
+
+  ```js
+  console.log("Markdown features including the code block are available");
+  ```
+
+  You can use Markdown here including **bold** and _italic_ text, and [inline link](https://docusaurus.io)
+  </details>
