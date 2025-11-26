@@ -92,19 +92,65 @@ a.table-of-contents__link--active {
 h1{
   color: var(--ifm-color-primary-light);
 }
+details[data-collapsed='true'] summary {
+  border: 0px solid;
+  transition: 0.22s ease;
+
+}
+details{
+  box-shadow: 0px -1px 2px 0px rgba(0,0,0,0.08);
+-webkit-box-shadow: 0px -1px 2px 2px rgba(0,0,0,0.08);
+-moz-box-shadow: 0px -1px 2px 6px rgba(0,0,0,0.08);
+}
+details[data-collapsed='true']:hover{
+  background-color: var(--ifm-color-primary-lightest);
+  
+
+}
+.collapseSidebarButton_JQG6 {
+  display: flex !important;
+  background-color: var(--docusaurus-collapse-button-bg);
+  
+  position: absolute!important;
+  bottom: 0;
+  border-radius: 0;
+  border: 1px solid var(--ifm-toc-border-color);
+  width: -webkit-fill-available;
+  text-align: center;
+  align-items: center;
+  justify-content: center!important;
+}
+details[data-collapsed='false'] summary,.details_lb9f[data-collapsed='false'].isBrowser_bmU9 > summary::after{
+  color: #149af3!important;
+  transition: .2s ease;
+
+}
+details[data-collapsed='false'] summary {
+  border-bottom: 1px solid #003f87;
+  transition: 0.2s ease;
+}
 summary{
   justify-content: space-between;
   display: flex;
-  width: 24rem;
+  position: relative;
+  font-weight: bold;
+  color:var(--ifm-color-primary-dark)
+  
 }
 .details_lb9f > summary::after {
 position: absolute;
-  top: 0.45rem;
-  left: 0;
-  content: '▶';}
+  top: 0rem;
+  right: 0;
+  content: '▶';
+  font-size: 0.8rem;
+  color:var(--ifm-color-primary-dark);
+transition: .2s ease;
+}
   .details_lb9f[open]:not(.isBrowser_bmU9) > summary::before, .details_lb9f[data-collapsed='false'].isBrowser_bmU9 > summary::after {
     transform: rotate(90deg);
+    transition: .2s ease;
 }
+
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
   --ifm-color-primary: #99c9ff;
