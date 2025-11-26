@@ -33,7 +33,7 @@ export default function DocSidebarDesktopContent({path, sidebar, className}) {
         description: 'The ARIA label for the sidebar navigation',
       })}
       className={clsx(
-        'menu thin-scrollbar mx-4 tableOfContents_jeP5 ' ,
+        'menu thin-scrollbar mx-4 tableOfContents_jeP5  ' ,
        
         showAnnouncementBar && styles.menuWithAnnouncementBar,
         className,
@@ -42,7 +42,7 @@ export default function DocSidebarDesktopContent({path, sidebar, className}) {
         <DocSidebarItems items={sidebar} activePath={path} level={1} />
       </ul>
     </nav>
-    <CollapseButton click={false}></CollapseButton>
+    
     </>
   );
 }
