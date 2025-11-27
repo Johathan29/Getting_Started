@@ -27,6 +27,7 @@
     "@vitejs/plugin-react": "^5.1.0",
     "clsx": "^2.0.0",
     "framer-motion": "^12.23.24",
+    "iframe": "^1.0.0",
     "lucide-react": "^0.553.0",
     "npx": "^3.0.0",
     "postcss": "^8.5.6",

@@ -55,7 +55,7 @@ export default function HomepageFeatures() {
     <section className={styles.features}>
       <div className="container mx-auto">
         <div className="row">
-          <Alert  title="prueba" description="viendo si la description funciona" type="warning" ></Alert>
+          <Alert  title="prueba" description=" A simple info alert with an example link. Give it a click if you like." type="warning" ></Alert>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
