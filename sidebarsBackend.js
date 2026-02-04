@@ -5,18 +5,18 @@ export default {
       "type": "category",
       "label": "API",
       "items": [
-        "backend/API/auth",
-        "backend/API/endpoints"
+        "C:/Users/rosar/Documents/Project/docusorus/my-website/docs/backend/API/auth",
+        "C:/Users/rosar/Documents/Project/docusorus/my-website/docs/backend/API/endpoints"
       ]
     },
     {
       "type": "category",
       "label": "Base-datos",
       "items": [
-        "backend/base-datos/modelos",
-        "backend/base-datos/queries"
+        "C:/Users/rosar/Documents/Project/docusorus/my-website/docs/backend/base-datos/modelos",
+        "C:/Users/rosar/Documents/Project/docusorus/my-website/docs/backend/base-datos/queries"
       ]
     },
-    "backend/intro"
+    "C:/Users/rosar/Documents/Project/docusorus/my-website/docs/backend/intro"
   ]
 };

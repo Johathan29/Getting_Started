@@ -93,6 +93,7 @@ const config = {
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
+    
     [
       '@docusaurus/plugin-content-docs',
       {

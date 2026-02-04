@@ -20,6 +20,27 @@ export default {
         "rel": "icon",
         "href": "/img/favicon.ico"
       }
+    },
+    {
+      "tagName": "link",
+      "attributes": {
+        "rel": "stylesheet",
+        "href": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+      }
+    },
+    {
+      "tagName": "link",
+      "attributes": {
+        "rel": "stylesheet",
+        "href": "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      }
+    },
+    {
+      "tagName": "link",
+      "attributes": {
+        "rel": "stylesheet",
+        "href": "https://fonts.googleapis.com/icon?family=Material+Icons"
+      }
     }
   ],
   "scripts": [
@@ -83,7 +104,7 @@ export default {
         "id": "frontend",
         "path": "docs/frontend",
         "routeBasePath": "frontend",
-        "sidebarPath": "/home/Johathan29/Getting_Started/sidebars.js"
+        "sidebarPath": "C:\\Users\\rosar\\Documents\\Project\\docusorus\\my-website\\sidebars.js"
       }
     ],
     [
@@ -92,7 +113,7 @@ export default {
         "id": "backend",
         "path": "docs/backend",
         "routeBasePath": "backend",
-        "sidebarPath": "/home/Johathan29/Getting_Started/sidebars.js"
+        "sidebarPath": "C:\\Users\\rosar\\Documents\\Project\\docusorus\\my-website\\sidebars.js"
       }
     ],
     [
@@ -101,7 +122,16 @@ export default {
         "id": "systems",
         "path": "docs/systems",
         "routeBasePath": "systems",
-        "sidebarPath": "/home/Johathan29/Getting_Started/sidebars.js"
+        "sidebarPath": "C:\\Users\\rosar\\Documents\\Project\\docusorus\\my-website\\sidebars.js"
+      }
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        "id": "detail",
+        "path": "docs/detail",
+        "routeBasePath": "detail",
+        "sidebarPath": "C:\\Users\\rosar\\Documents\\Project\\docusorus\\my-website\\sidebars.js"
       }
     ]
   ],
@@ -151,7 +181,7 @@ export default {
         {
           "items": [
             {
-              "html": "\n            <a href=\"https://github.com/facebook/docusaurus\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"footer__link-item w-auto\" >\n              <img src=\"/img/logo-footer.png\" style=\"\" class='w-[15rem] lg:w-[10rem]'/>\n              \n            </a>\n          "
+              "html": "\n            <a href=\"https://github.com/facebook/docusaurus\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"footer__link-item\" style=\"display:flex; align-items:center; gap:5px;height: 4rem;\">\n              <img src=\"/img/logo-footer.png\" style=\"\" />\n              \n            </a>\n          "
             }
           ],
           "title": null
@@ -199,7 +229,7 @@ export default {
           ]
         }
       ],
-      "copyright": "Copyright © 2025 Full Stack Docs."
+      "copyright": "Copyright © 2026 Full Stack Docs."
     },
     "prism": {
       "theme": {
