@@ -8,8 +8,8 @@ const LINK_CLASS_NAME = 'table-of-contents__link toc-highlight text-sm font-medi
 const LINK_ACTIVE_CLASS_NAME = 'table-of-contents__link--active';
 export default function TOC({className, ...props}) {
   return (
-    <div className={clsx(styles.tableOfContents, 'thin-scrollbar px-4 ', className)}>
-      <h4>En esta página</h4>
+    <div className={clsx(styles.tableOfContents, 'thin-scrollbar px-4 space-y-2', className)}>
+      <h4 className='font-bold'>En esta página</h4>
       
       <TOCItems
         {...props}

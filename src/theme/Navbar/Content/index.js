@@ -42,21 +42,23 @@ ${JSON.stringify(item, null, 2)}`,
 }
 function NavbarContentLayout({left, right}) {
   return (
-    <div className="navbar__inner">
-      <div
-        className={clsx(
-          ThemeClassNames.layout.navbar.containerLeft,
-          'navbar__items gap-4',
-        )}>
-        {left}
-      </div>
-      <div
-        className={clsx(
-          ThemeClassNames.layout.navbar.containerRight,
-          'navbar__items navbar__items--right ',
-        )}>
-        {right}
-      </div>
+    <div className="navbar__inner container mx-auto px-6 py-4">
+      <div className='flex items-center justify-between w-full'>
+        <div
+          className={clsx(
+            ThemeClassNames.layout.navbar.containerLeft,
+            'navbar__items gap-4 justify-around w-full',
+          )}>
+          {left}
+        </div>
+        <div
+          className={clsx(
+            ThemeClassNames.layout.navbar.containerRight,
+            'navbar__items navbar__items--right ',
+          )}>
+          {right}
+        </div>
+    </div>
     </div>
   );
 }
@@ -72,7 +74,9 @@ export default function NavbarContent() {
         <>
           {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
           <NavbarLogo />
+          <div className='flex gap-[2rem] hidden lg:flex items-center gap-8 text-sm '>
           <NavbarItems items={leftItems} />
+          </div>
         </>
       }
       right={

@@ -16,7 +16,7 @@ export default function TOCCollapsibleCollapseButton({collapsed, ...props}) {
       <Translate
         id="theme.TOCCollapsible.toggleButtonLabel"
         description="The label used by the button on the collapsible TOC component">
-        On this page
+        En esta página
       </Translate>
     </button>
   );

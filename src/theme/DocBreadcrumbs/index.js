@@ -43,7 +43,7 @@ export default function DocBreadcrumbs() {
     <>
       <DocBreadcrumbsStructuredData breadcrumbs={breadcrumbs} />
       <nav
-        className={clsx(
+        className={clsx("!mb-0",
           ThemeClassNames.docs.docBreadcrumbs,
           styles.breadcrumbsContainer,
         )}

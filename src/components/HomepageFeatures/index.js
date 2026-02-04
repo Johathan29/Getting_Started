@@ -2,65 +2,157 @@ import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 import { Card } from '../ui/card';
-import Alert from '../ui/alert'
+import Link from '@docusaurus/Link';
+import { motion } from 'framer-motion';
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'FrontEnd',
+    Svg: 'brush',
+    bgColor:'bg-blue-50 ',
+    color:'text-secondary',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Librerías de UI, Design System 'Patria' y guías de experiencia de usuario institucional.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'BackEnd',
+    Svg:'code',
+    bgColor:'bg-red-50',
+    color:'text-primary',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Arquitecturas de microservicios, estándares de seguridad y protocolos de comunicación.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Base de datos ',
+    Svg: 'storage',
+     bgColor:'bg-slate-50',
+    color:'text-slate-700',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+       Esquemas de datos fiscales, normalización y políticas de gobernanza de información.
+      </>
+    ),
+  },
+    {
+    title: 'Infraestructura',
+    Svg: 'cloud',
+    bgColor:'bg-emerald-50',
+    color:'!text-emerald-700',
+    description: (
+      <>
+        Despliegue en nube gubernamental, Kubernetes, CI/CD y monitoreo de sistemas.
       </>
     ),
   },
 ];
-
-function Feature({Svg, title, description}) {
-  return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text-center padding-horiz--xl">
-        <Heading as="h3" className={clsx('text-gray-500')}>{title}</Heading>
-        <p className={clsx('text--bold')}>{description}</p>
-      </div>
-    </div>
-  );
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
 }
+
+const cardVariants = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+    scale: 0.98,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.45,
+      ease: 'easeOut',
+    },
+  },
+}
+
+function Feature({ Svg, title, description, color, bgColor }) {
+  return (
+    <motion.div variants={cardVariants}>
+      <Link
+        to={'/' + title.toLowerCase() + '/intro'}
+        className={clsx(
+          'group bg-white block dark:bg-slate-800 p-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300'
+        )}
+      >
+        <div
+          className={clsx(
+            bgColor,
+            'w-16 h-16 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform'
+          )}
+        >
+          <span
+            className={clsx(
+              color,
+              'material-icons dark:text-blue-400 text-3xl'
+            )}
+          >
+            {Svg}
+          </span>
+        </div>
+
+        <Heading
+          as="h3"
+          className="text-[var(--ifm-color-primary-light)] text-xl font-bold mb-3"
+        >
+          {title}
+        </Heading>
+
+        <p className="text-[var(--text-secundary)] dark:text-slate-400 mb-6 line-clamp-2">
+          {description}
+        </p>
+
+        <span className="text-sm font-bold text-primary flex items-center gap-1 group-hover:text-black">
+          Leer más
+          <span className="material-icons text-xs group-hover:translate-x-2 transition-transform">
+            chevron_right
+          </span>
+        </span>
+      </Link>
+    </motion.div>
+  )
+}
+
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
-      <div className="container mx-auto">
-        <div className="row">
-          <Alert  title="prueba" description=" A simple info alert with an example link. Give it a click if you like." type="warning" ></Alert>
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+    <>
+    <section className={clsx('',styles.bgbackgroundlight)}>
+      <div className='py-20 container mx-auto px-6'>
+      <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4 w-full">
+        <div>
+        <h2 class="text-3xl font-bold text-secondary dark:text-white mb-2">Explora por Categorías</h2>
+        <p class="text-slate-500 dark:text-slate-400">Todo lo que necesitas para integrar y desplegar tus soluciones.</p>
         </div>
+        <a class="text-primary font-semibold flex items-center gap-2 hover:underline" href="#">
+                        Ver todo el catálogo <span class="material-icons text-sm">arrow_forward</span>
+        </a>
       </div>
+       
+      <motion.div
+  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 w-full"
+  variants={containerVariants}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, margin: '-80px' }}
+>
+  {FeatureList.map((props, idx) => (
+    <Feature key={idx} {...props} />
+  ))}
+</motion.div>
+        </div>
     </section>
+   
+</>
   );
 }

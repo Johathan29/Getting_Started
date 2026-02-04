@@ -6,25 +6,59 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
+import UpdatesList from '../components/UpdatesSection/index';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/frontend/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
+     <section className={styles.hero}>
+      {/* Grid background */}
+      <div className={styles.grid}>
+        <svg width="100%" height="100%" fill="none">
+          <defs>
+            <pattern
+              id="grid"
+              width="40"
+              height="40"
+              patternUnits="userSpaceOnUse"
+            >
+              <path
+                d="M 40 0 L 0 0 0 40"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1"
+              />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+      </div>
+
+      <div className={styles.container}>
+        <h1 className={clsx("text-white",styles.title)}>
+          Documentación Técnica
+        </h1>
+
+        <p className={styles.description}>
+          Recursos integrales para desarrolladores, analistas y arquitectos de
+          sistemas del Ministerio. Construyendo el futuro digital de la
+          administración pública.
+        </p>
+
+        <div className={styles.searchBox}>
+          <span className={styles.icon}>search</span>
+
+          <input
+            type="text"
+            placeholder="¿Qué estás buscando hoy? (ej. API de Impuestos)"
+            className={styles.input}
+          />
+
+          <kbd className={styles.kbd}>CMD + K</kbd>
         </div>
       </div>
-    </header>
+    </section>
+    
   );
 }
 
@@ -37,7 +71,9 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <UpdatesList></UpdatesList>
       </main>
     </Layout>
   );
 }
+
