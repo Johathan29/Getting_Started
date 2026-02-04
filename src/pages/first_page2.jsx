@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+/*import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import markdown from './markdown-page.md'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -69,4 +69,4 @@ export default function first_page() {
     </main>
     
     );
-  }
+  }*/
