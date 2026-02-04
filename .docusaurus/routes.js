@@ -123,6 +123,16 @@ export default [
     exact: true
   },
   {
+    path: '/updates/%5B...slug%5D',
+    component: ComponentCreator('/updates/%5B...slug%5D', 'c58'),
+    exact: true
+  },
+  {
+    path: '/updates/detail',
+    component: ComponentCreator('/updates/detail', '164'),
+    exact: true
+  },
+  {
     path: '/backend',
     component: ComponentCreator('/backend', 'c7e'),
     routes: [
@@ -179,6 +189,30 @@ export default [
               {
                 path: '/backend/intro',
                 component: ComponentCreator('/backend/intro', '2ad'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    path: '/detail',
+    component: ComponentCreator('/detail', '9af'),
+    routes: [
+      {
+        path: '/detail',
+        component: ComponentCreator('/detail', '6d8'),
+        routes: [
+          {
+            path: '/detail',
+            component: ComponentCreator('/detail', '1a0'),
+            routes: [
+              {
+                path: '/detail/intro',
+                component: ComponentCreator('/detail/intro', '9ec'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }

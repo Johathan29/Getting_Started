@@ -28,7 +28,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Base de datos ',
+    title: 'basedatos ',
     Svg: 'storage',
      bgColor:'bg-slate-50',
     color:'text-slate-700',
