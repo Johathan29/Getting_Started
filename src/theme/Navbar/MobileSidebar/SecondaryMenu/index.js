@@ -4,7 +4,7 @@ import {useNavbarSecondaryMenu} from '@docusaurus/theme-common/internal';
 import Translate from '@docusaurus/Translate';
 function SecondaryMenuBackButton(props) {
   return (
-    <button {...props} type="button" className="clean-btn navbar-sidebar__back mt-4">
+    <button {...props} type="button" className="clean-btn navbar-sidebar__back">
       <Translate
         id="theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel"
         description="The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)">

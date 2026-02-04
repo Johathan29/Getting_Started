@@ -28,7 +28,7 @@ function DocCategoryGeneratedIndexPageContent({categoryGeneratedIndex}) {
       <DocVersionBanner />
       <DocBreadcrumbs />
       <DocVersionBadge />
-      <header className={clsx('mt-[2.5rem]')}>
+      <header className={clsx('')}>
         <Heading as="h1" className={clsx(' font-bold text-[2.2rem]',styles.title)}>
           {categoryGeneratedIndex.title}
         </Heading>

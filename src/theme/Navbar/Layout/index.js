@@ -24,6 +24,7 @@ export default function NavbarLayout({children}) {
   const mobileSidebar = useNavbarMobileSidebar();
   const {navbarRef, isNavbarVisible} = useHideableNavbar(hideOnScroll);
   return (
+    <header className='sticky top-0 z-50  backdrop-blur-md border-b border-slate-200 dark:border-slate-800'>
     <nav
       ref={navbarRef}
       aria-label={translate({
@@ -33,7 +34,7 @@ export default function NavbarLayout({children}) {
       })}
       className={clsx(
         ThemeClassNames.layout.navbar.container,
-        'navbar !bg-[var(--ifm-color-primary-darker)] text-white px-4',
+        'navbar  text- px-4 !bg-[var(--ifm-color-primary-darker)]',
         'navbar--fixed-top',
         hideOnScroll && [
           styles.navbarHideable,
@@ -49,5 +50,6 @@ export default function NavbarLayout({children}) {
       <NavbarBackdrop onClick={mobileSidebar.toggle} />
       <NavbarMobileSidebar />
     </nav>
+  </header>
   );
 }

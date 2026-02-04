@@ -7,7 +7,7 @@ export default function DocSidebarItemLink({ item, activePath }) {
   const isActive = isActiveSidebarItem(item, activePath);
 
   return (
-    <li className="menu__list-items">
+    <li className="menu__list-item">
       <Link
         to={item.href}
         className={clsx(

@@ -8,7 +8,6 @@ import {
 import {translate} from '@docusaurus/Translate';
 import DocSidebarItems from '@theme/DocSidebarItems';
 import styles from './styles.module.css';
-import CollapseButton from '../CollapseButton';
 function useShowAnnouncementBar() {
   const {isActive} = useAnnouncementBar();
   const [showAnnouncementBar, setShowAnnouncementBar] = useState(isActive);
@@ -25,7 +24,6 @@ function useShowAnnouncementBar() {
 export default function DocSidebarDesktopContent({path, sidebar, className}) {
   const showAnnouncementBar = useShowAnnouncementBar();
   return (
-    <>
     <nav
       aria-label={translate({
         id: 'theme.docs.sidebar.navAriaLabel',
@@ -33,7 +31,7 @@ export default function DocSidebarDesktopContent({path, sidebar, className}) {
         description: 'The ARIA label for the sidebar navigation',
       })}
       className={clsx(
-        'menu thin-scrollbar mx-4 tableOfContents_jeP5  ' ,
+        'menu thin-scrollbar mx-4 tableOfContents_jeP5 ' ,
        
         showAnnouncementBar && styles.menuWithAnnouncementBar,
         className,
@@ -42,7 +40,5 @@ export default function DocSidebarDesktopContent({path, sidebar, className}) {
         <DocSidebarItems items={sidebar} activePath={path} level={1} />
       </ul>
     </nav>
-    
-    </>
   );
 }

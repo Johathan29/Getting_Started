@@ -21,8 +21,28 @@ const config = {
         rel: "icon",
         href: "/img/favicon.ico",
       },
+    }, 
+      {
+      tagName: "link",
+      attributes: {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap",
+      },
     },
-
+    {
+      tagName: "link",
+      attributes: {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap",
+      },
+    },
+ {
+      tagName: "link",
+      attributes: {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/icon?family=Material+Icons",
+      },
+    },
   ],
        scripts: [
     {
@@ -53,7 +73,9 @@ const config = {
   ],
 
   plugins: [
-    [
+    
+   
+     [
       '@docusaurus/plugin-content-docs',
       {
         id: 'frontend',
@@ -77,6 +99,15 @@ const config = {
         id: 'systems',
         path: 'docs/systems',
         routeBasePath: 'systems',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+     [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'detail',
+        path: 'docs/detail',
+        routeBasePath: 'detail',
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
@@ -124,10 +155,9 @@ const config = {
          
       items: [
         {
-          
           html: `
-            <a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item w-auto" >
-              <img src="/img/logo-footer.png" style="" class='w-[15rem] lg:w-[10rem]'/>
+            <a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item" style="display:flex; align-items:center; gap:5px;height: 4rem;">
+              <img src="/img/logo-footer.png" style="" />
               
             </a>
           `,
