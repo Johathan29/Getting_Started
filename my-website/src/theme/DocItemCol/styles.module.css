@@ -1,9 +1,0 @@
-.docItemCol {
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  transition: background 0.3s ease;
-}
-
-.docItemCol:hover {
-  background: rgba(30, 30, 40, 0.6);
-}

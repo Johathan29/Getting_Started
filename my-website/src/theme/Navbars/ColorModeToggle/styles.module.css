@@ -1,7 +1,0 @@
-.darkNavbarColorModeToggle:hover {
-  background: var(--ifm-color-gray-800);
-}
-
-.darkNavbarColorModeToggle {
-  filter: brightness(0.85);
-}
