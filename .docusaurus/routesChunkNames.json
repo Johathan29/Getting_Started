@@ -263,19 +263,26 @@
     },
     "content": "content---markdown-page-393-028"
   },
+  "/updates/-7c7": {
+    "__comp": "__comp---site-src-pages-updates-index-tsx-476-e39",
+    "__context": {
+      "plugin": "plugin---first-pagea-74-22e"
+    },
+    "config": "config---updates-5-e-9-278"
+  },
   "/updates/%5B...slug%5D-c58": {
     "__comp": "__comp---site-src-pages-updates-slug-tsxb-4-f-942",
     "__context": {
       "plugin": "plugin---first-pagea-74-22e"
     },
-    "config": "config---first-page-25-e-9-f22"
+    "config": "config---updates-5-e-9-278"
   },
   "/updates/detail-164": {
     "__comp": "__comp---site-src-pages-updates-detail-tsx-384-e92",
     "__context": {
       "plugin": "plugin---first-pagea-74-22e"
     },
-    "config": "config---first-page-25-e-9-f22"
+    "config": "config---updates-5-e-9-278"
   },
   "/backend-c7e": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
@@ -322,18 +329,39 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---backend-intro-160-547"
   },
-  "/detail-9af": {
+  "/basedatos-3c9": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---basedatosc-58-adb"
+    }
+  },
+  "/basedatos-6c9": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---basedatosba-1-27b"
+  },
+  "/basedatos-415": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/basedatos/intro-de1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---basedatos-intro-2-a-7-10c"
+  },
+  "/detail-266": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---detailc-9-b-96d"
     }
   },
-  "/detail-6d8": {
+  "/detail-203": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---detail-86-f-1fb"
   },
-  "/detail-1a0": {
+  "/detail-c3b": {
     "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/detail/componentes-b2e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---detail-componentes-810-79b"
   },
   "/detail/intro-9ec": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -372,6 +400,23 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---frontend-intro-784-f70"
   },
+  "/infraestructura-0e1": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---infraestructurae-50-4c0"
+    }
+  },
+  "/infraestructura-99b": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---infraestructura-8-bb-21c"
+  },
+  "/infraestructura-c8d": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/infraestructura/intro-039": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---infraestructura-intro-401-28e"
+  },
   "/systems-b50": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
@@ -409,11 +454,32 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---systems-tutorial-extras-translate-your-sitec-65-f1b"
   },
+  "/updates-4ce": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---updates-0-a-1-87b"
+    }
+  },
+  "/updates-6f3": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---updates-25-d-473"
+  },
+  "/updates-12e": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/updates/-9fd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---updates-48-d-ed1"
+  },
+  "/updates/update-45a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---updates-update-0-df-972"
+  },
   "/-2e1": {
     "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
     "__context": {
       "plugin": "plugin---first-pagea-74-22e"
     },
-    "config": "config---first-page-25-e-9-f22"
+    "config": "config---updates-5-e-9-278"
   }
 }

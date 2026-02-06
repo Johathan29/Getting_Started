@@ -178,6 +178,11 @@
           "mainDocId": "intro",
           "docs": [
             {
+              "id": "componentes",
+              "path": "/detail/componentes",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "intro",
               "path": "/detail/intro",
               "sidebar": "tutorialSidebar"
@@ -189,6 +194,98 @@
               "link": {
                 "path": "/detail/intro",
                 "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    },
+    "basedatos": {
+      "path": "/basedatos",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/basedatos",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "intro",
+              "path": "/basedatos/intro",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/basedatos/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    },
+    "infraestructura": {
+      "path": "/infraestructura",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/infraestructura",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "intro",
+              "path": "/infraestructura/intro",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/infraestructura/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    },
+    "updates": {
+      "path": "/updates",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/updates",
+          "mainDocId": "index",
+          "docs": [
+            {
+              "id": "index",
+              "path": "/updates/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "update",
+              "path": "/updates/update",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/updates/",
+                "label": "index"
               }
             }
           }

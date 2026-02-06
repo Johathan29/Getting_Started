@@ -123,6 +123,11 @@ export default [
     exact: true
   },
   {
+    path: '/updates/',
+    component: ComponentCreator('/updates/', '7c7'),
+    exact: true
+  },
+  {
     path: '/updates/%5B...slug%5D',
     component: ComponentCreator('/updates/%5B...slug%5D', 'c58'),
     exact: true
@@ -199,17 +204,47 @@ export default [
     ]
   },
   {
+    path: '/basedatos',
+    component: ComponentCreator('/basedatos', '3c9'),
+    routes: [
+      {
+        path: '/basedatos',
+        component: ComponentCreator('/basedatos', '6c9'),
+        routes: [
+          {
+            path: '/basedatos',
+            component: ComponentCreator('/basedatos', '415'),
+            routes: [
+              {
+                path: '/basedatos/intro',
+                component: ComponentCreator('/basedatos/intro', 'de1'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     path: '/detail',
-    component: ComponentCreator('/detail', '9af'),
+    component: ComponentCreator('/detail', '266'),
     routes: [
       {
         path: '/detail',
-        component: ComponentCreator('/detail', '6d8'),
+        component: ComponentCreator('/detail', '203'),
         routes: [
           {
             path: '/detail',
-            component: ComponentCreator('/detail', '1a0'),
+            component: ComponentCreator('/detail', 'c3b'),
             routes: [
+              {
+                path: '/detail/componentes',
+                component: ComponentCreator('/detail/componentes', 'b2e'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
               {
                 path: '/detail/intro',
                 component: ComponentCreator('/detail/intro', '9ec'),
@@ -271,6 +306,30 @@ export default [
     ]
   },
   {
+    path: '/infraestructura',
+    component: ComponentCreator('/infraestructura', '0e1'),
+    routes: [
+      {
+        path: '/infraestructura',
+        component: ComponentCreator('/infraestructura', '99b'),
+        routes: [
+          {
+            path: '/infraestructura',
+            component: ComponentCreator('/infraestructura', 'c8d'),
+            routes: [
+              {
+                path: '/infraestructura/intro',
+                component: ComponentCreator('/infraestructura/intro', '039'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     path: '/systems',
     component: ComponentCreator('/systems', 'b50'),
     routes: [
@@ -315,6 +374,36 @@ export default [
               {
                 path: '/systems/tutorial-extras/translate-your-site',
                 component: ComponentCreator('/systems/tutorial-extras/translate-your-site', '96d'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    path: '/updates',
+    component: ComponentCreator('/updates', '4ce'),
+    routes: [
+      {
+        path: '/updates',
+        component: ComponentCreator('/updates', '6f3'),
+        routes: [
+          {
+            path: '/updates',
+            component: ComponentCreator('/updates', '12e'),
+            routes: [
+              {
+                path: '/updates/',
+                component: ComponentCreator('/updates/', '9fd'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/updates/update',
+                component: ComponentCreator('/updates/update', '45a'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }

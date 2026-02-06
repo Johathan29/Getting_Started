@@ -112,6 +112,34 @@ const config = {
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'basedatos',
+        path: 'docs/basedatos',
+        routeBasePath: 'basedatos',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+     [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'infraestructura',
+        path: 'docs/infraestructura',
+        routeBasePath: 'infraestructura',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+     [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'updates',
+        path: 'docs/updates',
+        routeBasePath: 'updates',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+    
   ],
 
   themeConfig: {

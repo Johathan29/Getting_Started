@@ -28,7 +28,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'basedatos ',
+    title: 'basedatos',
     Svg: 'storage',
      bgColor:'bg-slate-50',
     color:'text-slate-700',

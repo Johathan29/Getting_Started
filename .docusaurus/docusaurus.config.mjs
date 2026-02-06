@@ -104,7 +104,7 @@ export default {
         "id": "frontend",
         "path": "docs/frontend",
         "routeBasePath": "frontend",
-        "sidebarPath": "C:\\Users\\rosar\\Documents\\Project\\docusorus\\my-website\\sidebars.js"
+        "sidebarPath": "C:\\Users\\rosar\\Documents\\Project\\Getting_Started\\sidebars.js"
       }
     ],
     [
@@ -113,7 +113,7 @@ export default {
         "id": "backend",
         "path": "docs/backend",
         "routeBasePath": "backend",
-        "sidebarPath": "C:\\Users\\rosar\\Documents\\Project\\docusorus\\my-website\\sidebars.js"
+        "sidebarPath": "C:\\Users\\rosar\\Documents\\Project\\Getting_Started\\sidebars.js"
       }
     ],
     [
@@ -122,7 +122,7 @@ export default {
         "id": "systems",
         "path": "docs/systems",
         "routeBasePath": "systems",
-        "sidebarPath": "C:\\Users\\rosar\\Documents\\Project\\docusorus\\my-website\\sidebars.js"
+        "sidebarPath": "C:\\Users\\rosar\\Documents\\Project\\Getting_Started\\sidebars.js"
       }
     ],
     [
@@ -131,7 +131,34 @@ export default {
         "id": "detail",
         "path": "docs/detail",
         "routeBasePath": "detail",
-        "sidebarPath": "C:\\Users\\rosar\\Documents\\Project\\docusorus\\my-website\\sidebars.js"
+        "sidebarPath": "C:\\Users\\rosar\\Documents\\Project\\Getting_Started\\sidebars.js"
+      }
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        "id": "basedatos",
+        "path": "docs/basedatos",
+        "routeBasePath": "basedatos",
+        "sidebarPath": "C:\\Users\\rosar\\Documents\\Project\\Getting_Started\\sidebars.js"
+      }
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        "id": "infraestructura",
+        "path": "docs/infraestructura",
+        "routeBasePath": "infraestructura",
+        "sidebarPath": "C:\\Users\\rosar\\Documents\\Project\\Getting_Started\\sidebars.js"
+      }
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        "id": "updates",
+        "path": "docs/updates",
+        "routeBasePath": "updates",
+        "sidebarPath": "C:\\Users\\rosar\\Documents\\Project\\Getting_Started\\sidebars.js"
       }
     ]
   ],
