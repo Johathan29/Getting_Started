@@ -26,7 +26,7 @@ export default function ApiList() {
           >
             <div
               className={clsx(
-                'bg-white group dark:bg-slate-800 p-5 rounded-xl border-l-4 border-primary !shadow-md hover:!shadow-xl transition-all cursor-pointer flex justify-between items-center'
+                'bgwhite group dark:bg-slate-800 p-5 rounded-xl border-l-4 border-primary !shadow-md hover:!shadow-xl transition-all cursor-pointer flex justify-between items-center'
               )}
             >
               <div className="flex items-center gap-4 group-hover:!text-[#003876] transition-colors">

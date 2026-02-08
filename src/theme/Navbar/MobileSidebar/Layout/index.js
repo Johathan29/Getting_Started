@@ -1,4 +1,4 @@
-import React, {version} from 'react';
+ import React, {version} from 'react';
 import clsx from 'clsx';
 import {useNavbarSecondaryMenu} from '@docusaurus/theme-common/internal';
 import {ThemeClassNames} from '@docusaurus/theme-common';
@@ -17,7 +17,7 @@ function NavbarMobileSidebarPanel({children, inert}) {
     <div
       className={clsx(
         ThemeClassNames.layout.navbar.mobileSidebar.panel,
-        'navbar-sidebar__item menu',
+        'navbar-sidebar__item menu py-4 bg-[#101828]',
       )}
       {...inertProps(inert)}>
       {children}

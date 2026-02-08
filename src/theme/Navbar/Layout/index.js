@@ -24,7 +24,7 @@ export default function NavbarLayout({children}) {
   const mobileSidebar = useNavbarMobileSidebar();
   const {navbarRef, isNavbarVisible} = useHideableNavbar(hideOnScroll);
   return (
-    <header className='sticky top-0 z-50  backdrop-blur-md border-b border-slate-200 dark:border-slate-800'>
+    <header className='sticky top-0 z-50  !bg-red-500 border-b border-slate-200 dark:border-slate-800'>
     <nav
       ref={navbarRef}
       aria-label={translate({

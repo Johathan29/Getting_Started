@@ -82,7 +82,7 @@ function Feature({ Svg, title, description, color, bgColor }) {
       <Link
         to={'/' + title.toLowerCase() + '/intro'}
         className={clsx(
-          'group bg-white block dark:bg-slate-800 p-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300'
+          'group bgwhite  block dark:bg-slate-800 p-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300'
         )}
       >
         <div

@@ -47,7 +47,7 @@ function NavbarContentLayout({left, right}) {
         <div
           className={clsx(
             ThemeClassNames.layout.navbar.containerLeft,
-            'navbar__items gap-4 justify-around w-full',
+            'navbar__items gap-4 justify-between w-full',
           )}>
           {left}
         </div>
@@ -74,7 +74,7 @@ export default function NavbarContent() {
         <>
           {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
           <NavbarLogo />
-          <div className='flex gap-[2rem] hidden lg:flex items-center gap-8 text-sm '>
+          <div className='flex gap-[2rem] hidden lg:flex items-center gap-8 text-sm w-[72%]'>
           <NavbarItems items={leftItems} />
           </div>
         </>
@@ -84,7 +84,7 @@ export default function NavbarContent() {
         // Ask the user to add the respective navbar items => more flexible
         <>
           <NavbarItems items={rightItems} />
-          <NavbarColorModeToggle className={styles.colorModeToggle} />
+          <NavbarColorModeToggle className={clsx('text-white',styles.colorModeToggle)} />
           {!searchBarItem && (
             <NavbarSearch>
               <SearchBar />

@@ -139,7 +139,7 @@ main{
   }
   --ifm-color-primary: #3f82cf;
   --ifm-color-primary-dark: #003169;
-  --ifm-color-primary-darker: #ffffff;
+  --ifm-color-primary-darker: #0e3866;
   --ifm-color-primary-darkest: #002652;
   --ifm-color-primary-light: #003c81;
   --ifm-color-primary-lighter: #003f87;
@@ -185,9 +185,20 @@ h1{
   color: var(--ifm-color-primary-light);
 }
 
+.navbar__logo img{
+  padding: 2px;
+}
+.bgbackgroundlight {
+    --tw-bg-opacity: 1;
+    background-color: rgb(248 250 252 / var(--tw-bg-opacity, 1));
+}
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
+  .bgbackgroundlight {
+    --tw-bg-opacity: 1;
+    background-color: rgb(#030712 / var(--tw-bg-opacity, 1));
+}
   .text-secondary{
     color:white;
   }
@@ -330,7 +341,11 @@ background-color: #002652;
   width: 100%;
 }
 
-
+a.active {
+    color: #6eb4ec !important;
+    font-weight: 600;
+    text-decoration: underline;
+}
 
 /* ------------------------------------- */
 /* 3) Transición suave de color en hover */
