@@ -104,7 +104,24 @@ const config = {
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
-     
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'base-de-datos',
+        path: 'docs/base-de-datos',
+        routeBasePath: 'base-de-datos',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+     [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'infraestructura',
+        path: 'docs/infraestructura',
+        routeBasePath: 'infraestructura',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
   ],
 
   themeConfig: {
