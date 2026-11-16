@@ -103,15 +103,7 @@ const config = {
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
-     [
-      '@docusaurus/plugin-content-docs',
-      {
-        id: 'detail',
-        path: 'docs/detail',
-        routeBasePath: 'detail',
-        sidebarPath: require.resolve('./sidebars.js'),
-      },
-    ],
+     
   ],
 
   themeConfig: {
