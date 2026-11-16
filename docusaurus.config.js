@@ -3,6 +3,11 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import { generateNavbarItems } from './generateNavbar.js';
 
 /** @type {import('@docusaurus/types').Config} */
+module.exports = {
+  // ...
+  onBrokenLinks: 'warn',
+  // ...
+};
 const config = {
   title: 'MINISTERIO DE HACIENDA Y ECONOMÍA',
   tagline: 'Documentación del Proyecto',
