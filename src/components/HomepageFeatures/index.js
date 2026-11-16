@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 const FeatureList = [
   {
     title: 'FrontEnd',
+    url:"frontend",
     Svg: 'brush',
     bgColor:'bg-blue-50 ',
     color:'text-secondary',
@@ -18,6 +19,7 @@ const FeatureList = [
   },
   {
     title: 'BackEnd',
+    url:"backend",
     Svg:'code',
     bgColor:'bg-red-50',
     color:'text-primary',
@@ -28,7 +30,8 @@ const FeatureList = [
     ),
   },
   {
-    title: 'basedatos',
+    title: 'Base de datos',
+    url:"base-de-datos",
     Svg: 'storage',
      bgColor:'bg-slate-50',
     color:'text-slate-700',
@@ -40,6 +43,7 @@ const FeatureList = [
   },
     {
     title: 'Infraestructura',
+    url:"infraestructura",
     Svg: 'cloud',
     bgColor:'bg-emerald-50',
     color:'!text-emerald-700',
@@ -76,11 +80,11 @@ const cardVariants = {
   },
 }
 
-function Feature({ Svg, title, description, color, bgColor }) {
+function Feature({ Svg, title, description, color, bgColor,url }) {
   return (
     <motion.div variants={cardVariants}>
       <Link
-        to={'/' + title.toLowerCase() + '/intro'}
+        to={'/' + url.toLowerCase() + '/intro'}
         className={clsx(
           'group bg-white block dark:bg-slate-800 p-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300'
         )}
