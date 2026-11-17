@@ -9,7 +9,7 @@ export default function DefaultNavbarItemDesktop({
   const element = (
     <NavbarNavLink
       className={clsx(
-        isDropdownItem ? 'dropdown__link' : 'navbar__item navbar__link  items-center gap-1 !text-black hover:text-primary transition-colors dark:text-slate-300 font-medium',
+        isDropdownItem ? 'dropdown__link' : 'navbar__item navbar__link  items-center gap-1 text-white hover:text-primary transition-colors dark:text-slate-300 font-medium',
         className,
       )}
       isDropdownLink={isDropdownItem}

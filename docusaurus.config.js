@@ -3,7 +3,6 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import { generateNavbarItems } from './generateNavbar.js';
 
 /** @type {import('@docusaurus/types').Config} */
-
 const config = {
   title: 'MINISTERIO DE HACIENDA Y ECONOMÍA',
   tagline: 'Documentación del Proyecto',
@@ -104,12 +103,21 @@ const config = {
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
+     [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'detail',
+        path: 'docs/detail',
+        routeBasePath: 'detail',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'base-de-datos',
-        path: 'docs/base-de-datos',
-        routeBasePath: 'base-de-datos',
+        id: 'basedatos',
+        path: 'docs/basedatos',
+        routeBasePath: 'basedatos',
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
@@ -122,6 +130,16 @@ const config = {
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
+     [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'updates',
+        path: 'docs/updates',
+        routeBasePath: 'updates',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+    
   ],
 
   themeConfig: {

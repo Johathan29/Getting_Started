@@ -5,7 +5,7 @@ export async function fetchGitHubUpdates(latestSha?: string) {
 
   const data = await res.json()
 
-  const updates = data.slice(0, 3).map((commit: any) => ({
+  const updates = data.map((commit: any) => ({
     slug: commit.sha,
     title: commit.commit.message.split('\n')[0],
     description: commit.commit.message,

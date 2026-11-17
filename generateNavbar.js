@@ -18,8 +18,6 @@ export function generateNavbarItems() {
     { id: "frontend", label: "Frontend" },
     { id: "backend", label: "Backend" },
     { id: "systems", label: "Systems" },
-    { id: "base-de-datos", label: "base de datos" },
-    { id: "infraestructura", label: "Infraestructura" },
   ];
 
   return sections.map(({ id, label }) => {

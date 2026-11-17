@@ -4,8 +4,8 @@ export default function NavbarLogo() {
   return (
     <Logo
       className="navbar__brand"
-      imageClassName="navbar__logo"
-      titleClassName="navbar__title text-[#002f63] text--truncate"
+      imageClassName="navbar__logo "
+      titleClassName="navbar__title text-white text--truncate"
     />
   );
 }

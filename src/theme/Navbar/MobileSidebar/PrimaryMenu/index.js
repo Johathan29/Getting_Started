@@ -13,7 +13,7 @@ export default function NavbarMobilePrimaryMenu() {
   // Should we allow providing a different list of items?
   const items = useNavbarItems();
   return (
-    <ul className="menu__list">
+    <ul className="menu__list !mx-[2rem]">
       {items.map((item, i) => (
         <NavbarItem
           mobile

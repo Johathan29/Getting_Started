@@ -1,89 +1,73 @@
 import React, { useEffect, useState } from 'react'
-import Layout from '@theme/Layout'
 import { useLocation } from '@docusaurus/router'
+import Layout from '@theme/Layout'
+import Link from '@docusaurus/Link'
+import { fetchGitHubUpdates } from '../../utils/github'
 
-type CommitDetail = {
-  sha: string
-  message: string
-  author: string
-  date: string
-  files: {
-    filename: string
-    status: string
-    additions: number
-    deletions: number
-  }[]
-}
-
-export default function UpdateDetail() {
+export default function UpdateDetailPage() {
   const location = useLocation()
-  const slug = location.pathname.replace('/updates/', '')
-
-  const [commit, setCommit] = useState<CommitDetail | null>(null)
+  const slug = location.pathname.split('/').pop()
+  console.log(slug)
+  const [update, setUpdate] = useState<any>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    async function fetchCommit() {
-      try {
-        const res = await fetch(
-          `https://api.github.com/repos/Johathan29/petcareshops/commits/${slug}`
-        )
-        const data = await res.json()
+    if (!slug) return
 
-        setCommit({
-          sha: data.sha,
-          message: data.commit.message,
-          author: data.commit.author.name,
-          date: data.commit.author.date,
-          files: data.files || [],
-        })
-      } catch (e) {
-        console.error(e)
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchCommit()
+    fetchGitHubUpdates(slug)
+      .then(data => setUpdate(data))
+      .finally(() => setLoading(false))
   }, [slug])
 
+  if (loading) {
+    return (
+      <Layout title="Cargando...">
+        <p className="p-8">Cargando actualización…</p>
+      </Layout>
+    )
+  }
+
+  if (!update) {
+    return (
+      <Layout title="No encontrado">
+        <p className="p-8">Actualización no encontrada</p>
+      </Layout>
+    )
+  }
+
   return (
-    <Layout title="Detalle de actualización">
-      <main className="container margin-vert--lg">
-        {loading && <p>Cargando actualización…</p>}
+    <Layout title={update.title} description={update.description}>
+      <main className="container margin-vert--lg max-w-3xl">
+        <Link to="/updates" className="text-primary text-sm">
+          ← Volver a actualizaciones
+        </Link>
 
-        {!loading && commit && (
-          <>
-            <h1 className="margin-bottom--sm">
-              {commit.message.split('\n')[0]}
-            </h1>
+        <h1 className="text-3xl font-bold mt-4">
+          {update.title}
+        </h1>
 
-            <p className="text--secondary">
-              <strong>Autor:</strong> {commit.author} <br />
-              <strong>Fecha:</strong>{' '}
-              {new Date(commit.date).toLocaleString('es')}
-            </p>
+        <p className="text-sm text-slate-500 mt-2">
+          {new Date(update.date).toLocaleDateString('es', {
+            dateStyle: 'long',
+          })}
+        </p>
 
-            <hr className="margin-vert--md" />
+        <hr className="my-6" />
 
-            <h3>Archivos modificados</h3>
+        <article
+          className="prose dark:prose-invert max-w-none"
+          dangerouslySetInnerHTML={{ __html: update.content }}
+        />
 
-            <ul>
-              {commit.files.map(file => (
-                <li key={file.filename}>
-                  <strong>{file.filename}</strong> — {file.status}
-                  <br />
-                  <small>
-                    +{file.additions} / -{file.deletions}
-                  </small>
-                </li>
-              ))}
-            </ul>
-          </>
-        )}
-
-        {!loading && !commit && (
-          <p>No se pudo cargar el detalle del cambio.</p>
+        {update.commitUrl && (
+          <a
+            href={update.commitUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-8 text-primary font-semibold"
+          >
+            Ver commit en GitHub →
+          </a>
         )}
       </main>
     </Layout>

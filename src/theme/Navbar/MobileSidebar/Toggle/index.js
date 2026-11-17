@@ -15,7 +15,9 @@ export default function MobileSidebarToggle() {
       })}
       aria-expanded={shown}
       className="navbar__toggle clean-btn"
-      type="button">
+      type="button"
+      style={{order:1}}
+      >
       <IconMenu />
     </button>
   );
