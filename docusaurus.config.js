@@ -140,10 +140,7 @@ const config = {
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
-    [
-      path.resolve(__dirname, 'src/plugins/dynamic-routes.js'),
-      {},
-    ],
+    
   ],
 
 
