@@ -24,7 +24,7 @@ export default function DocCardList(props) {
   }
   const filteredItems = filterDocCardListItems(items);
   return (
-    <section className={clsx('grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 gap-3 ', className)}>
+    <section className={clsx('grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 gap-8 ', className)}>
       {filteredItems.map((item, index) => (
         <DocCardListItem key={index} item={item} />
       ))}

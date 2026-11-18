@@ -29,7 +29,7 @@ function DocCategoryGeneratedIndexPageContent({categoryGeneratedIndex}) {
       <DocBreadcrumbs />
       <DocVersionBadge />
       <header className={clsx('')}>
-        <Heading as="h1" className={clsx(' font-bold text-[2.2rem]',styles.title)}>
+        <Heading as="h1" className={clsx(' font-bold !text-[2.2rem]',styles.title)}>
           {categoryGeneratedIndex.title}
         </Heading>
         {categoryGeneratedIndex.description && (

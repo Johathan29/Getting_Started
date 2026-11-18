@@ -40,7 +40,7 @@ function CardLayout({className, href, icon, title, description}) {
     <CardContainer href={href} className={className}>
       <Heading
         as="h2"
-        className={clsx('text--truncate decoration-none ', styles.cardTitle)}
+        className={clsx('text--truncate decoration-none !text-black !hover:text-[var(--ifm-color-primary-light)]', styles.cardTitle)}
         title={title}>
         {icon} {title}
       </Heading>

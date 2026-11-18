@@ -3,6 +3,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import { generateNavbarItems } from './generateNavbar.js';
 
 /** @type {import('@docusaurus/types').Config} */
+const path = require('path');
 const config = {
   title: 'MINISTERIO DE HACIENDA Y ECONOMÍA',
   tagline: 'Documentación del Proyecto',
@@ -139,9 +140,17 @@ const config = {
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
-    
+    [
+      path.resolve(__dirname, 'src/plugins/dynamic-routes.js'),
+      {},
+    ],
   ],
 
+
+  
+    // ...
+  
+  
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     colorMode: { respectPrefersColorScheme: true },
