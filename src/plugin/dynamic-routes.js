@@ -4,7 +4,7 @@ module.exports = function (context, options) {
       async contentLoaded({ content, actions }) {
         const { addRoute } = actions;
   
-        // Ejemplo de lista de elementos dinámicos (puedes traerlos de una API o archivo)
+       
         const items = [{ id: '1' }, { id: '2' }, { id: '3' }];
   
         items.forEach((item) => {
