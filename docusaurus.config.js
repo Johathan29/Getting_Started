@@ -140,7 +140,16 @@ const config = {
         sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
-    
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'respository',
+        path: 'docs/respository',
+        routeBasePath: 'respository',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+   
   ],
 
 
